@@ -6,6 +6,7 @@
 	<script src="https://aframe.io/releases/1.3.0/aframe.min.js">
 	</script>
 	<script src="https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar.js">
+ 	
 
 	</script>
 </head>
@@ -24,9 +25,20 @@
     sourceWidth= "800" sourceHeight= "600"
     displayWidth= "1280" displayHeight="720" >
 
+	<a-assets>
+		<a-asset-item
+		  id="Stage-obj"
+		  src="assets/Stage.obj"
+		></a-asset-item>
+		<a-asset-item
+		  id="Stage-mtl"
+		  src="assets/Stage.mtl"
+		></a-asset-item>
+	</a-assets>
+
 		<a-marker preset="kanji" size= "0.08">
 
-			<a-box position='0 0 0' rotation='0 0 0' scale='1 1 1' color='#FD5D3B' material='opacity: 1;'></a-box>
+			<a-entity scale="0.0075 0.0075 0.0075" obj-model="obj: #Stage-obj; mtl: #Stage-mtl"></a-entity>
 
 		</a-marker>
 
